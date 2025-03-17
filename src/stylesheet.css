@@ -1,0 +1,389 @@
+.avatar-display {
+    position: relative;
+    top: 5%;
+    width: 100%; 
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* avatar at bottom */
+}
+
+  .avatar-container {
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    width: 300px; 
+    height: 300px; 
+    border: 3px solid black; 
+    background-color: rgb(219, 247, 209);
+    position: relative; 
+    margin: 0 auto; 
+    padding: 10px; /* inside */
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* drop shadow*/
+    overflow: hidden;
+}
+
+.custom-avatar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Change from center to flex-start */
+    min-height: 100vh; /* Keeps it full-height but prevents pushing down */
+    padding-top: 20px; 
+  }
+  
+  .avatar-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  /* centers control panel buttons */
+  .control-panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; 
+    margin-top: 20px;
+  }
+  
+  /* center selection container */
+  .selection-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  /* style selection buttons */
+  .selection-container button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .selection-container img {
+    width: 80px; 
+    height: auto;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .selection-container img:hover {
+    transform: scale(1.1);
+  }
+  
+
+.skin-layer {
+    z-index: 0; /* skin at bottom */
+}
+
+.shirt-layer {
+    position: absolute;
+    top: 7%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* shirt on top of base */
+}
+
+.avatar-display img[src*="Shirt_4"] { /* shirt 4 only */
+    top: 3%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.avatar-display img[src*="Shirt_2"] { /* shirt 3 only */
+    top: 6%; 
+    left: 50%; 
+    transform: translateX(-50%);
+}
+
+.cheeks-layer {
+    position: absolute;
+    width: 108%; 
+    height: auto;
+    opacity: 0.5; 
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    z-index: 3; /* cheeks below  eyes */
+}
+
+.eyes-layer {
+    position: absolute;
+    top: 53%; /* up/down */
+    left: 50%;
+    transform: translate(-50%, -50%); /* center in container */
+    width: 100%;
+    height: auto;
+    z-index: 4; /* eyes  above cheeks */
+}
+
+.nose-layer {
+    position: absolute;
+    top: 52.5%; /* up/down */
+    left: 49.5%; 
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    z-index: 5; /* nose above cheeks and below eyes */
+}
+
+.mouth-layer {
+    position: absolute;
+    top: 52%; /* down */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: auto;
+    z-index: 5; /* mouth above cheeks */
+}
+
+.necklace-layer {
+    position: absolute;
+    top: 1%; 
+    left: 51%;
+    transform: translateX(-50%); 
+    z-index: 6; /* necklace on top of shirt */
+}
+
+.earring-layer {
+    position: absolute;
+    top: 0%; 
+    left: 49%;
+    transform: translateX(-50%); 
+    z-index: 7; /* ontop  of base*/
+} 
+
+/* HAIR */
+.hair {
+    position: absolute;
+    z-index: 4;
+}
+
+.hair-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Space between the two sections */
+  }
+  
+  .hair-color-section,
+  .hair-style-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .hair-color-row,
+  .hair-style-row {
+    display: flex;
+    flex-direction: row;  /* Keep items horizontal */
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .hair-color-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hair-style-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hair-thumbnail {
+    width: 60px;
+    height: auto;
+  }
+  
+
+.hair[src$="Hair_1_Brown.png"] {
+    top: .5%;
+    left: 50.5%;
+    width: 98%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_1_Black.png"] {
+    top: 2%;
+    left: 49%;
+    width: 98%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_1_Blonde.png"] {
+    top: 1.2%;
+    left: 49.5%;
+    width: 98%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_1_Red.png"] {
+    top: 2.2%;
+    left: 49%;
+    width: 98%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_2_Brown.png"] {
+    top: 2%;
+    left: 49.6%;
+    width: 97%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_2_Black.png"] {
+    top: 2.5%;
+    left: 51%;
+    width: 97%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_2_Blonde.png"] {
+    top: 2.2%;
+    left: 51%;
+    width: 98%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_2_Red.png"] {
+    top: 4%;
+    left: 50.5%;
+    width: 96%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_3_Brown.png"] {
+    top: -1%;
+    left: 50.3%;
+    width: 99%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_3_Black.png"] {
+    top: -1%;
+    left: 51%;
+    width: 100%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_3_Blonde.png"] {
+    top: -1%;
+    left: 50%;
+    width: 99%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_3_Red.png"] {
+    top: -1%;
+    left: 49%;
+    width: 100.2%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_4_Brown.png"] {
+    top: 1%;
+    left: 48.4%;
+    width: 101%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_4_Black.png"] {
+    top: 0%;
+    left: 48.6%;
+    width: 101%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_4_Blonde.png"] {
+    top: 1%;
+    left: 48.4%;
+    width: 101%;
+    transform: translateX(-50%);
+}
+
+.hair[src$="Hair_4_Red.png"] {
+    top: 1%;
+    left: 48.4%;
+    width: 101%;
+    transform: translateX(-50%);
+}
+
+
+/* main feature selection buttons  */
+.control-panel button {
+    width: auto; 
+    height: auto;  
+    padding: 10px 15px; 
+    border: none; 
+    background-color: pink; 
+    cursor: pointer;
+    margin: 5px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .control-panel button:hover {
+    background: rgb(255, 169, 212);
+  }  
+  
+  /* feature selection buttons */
+  .feature-button {
+    width: 100px;
+    height: 100px;
+    padding: 0;
+    border: solid, pink !important;/* force color */
+    background-color: transparent; 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 5px;
+    transition: transform 0.2s ease-in-out;
+}
+  
+  .feature-button:hover {
+    transform: scale(1.05);
+  }
+  
+  /* images inside buttons */
+  .feature-button img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
+  }
+
+  div[class$="-selection"] {
+    display: flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center; 
+    gap: 10px; 
+    flex-wrap: wrap; /* Allows wrapping if needed */
+}
+
+.download-btn {
+  display: block;
+  margin: 20px auto; 
+  padding: 10px 15px;
+  font-size: 16px;
+  background: rgb(214, 179, 202);
+  color: rgb(0, 0, 0);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  background: rgb(255, 169, 212);
+}
